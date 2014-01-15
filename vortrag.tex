@@ -51,6 +51,7 @@
 % Quality Assurance
 % * Es gibt automatische Q/A-Tools
 % * kaum Streitfälle - wenn dann Mailinglist, Data Working Group
+%    Mapper mittels eingebauten Social Networks direkt kontaktieren
 % * 
 % tolle Bilder herzeigen!
 % * irgendein Zoo
@@ -62,42 +63,61 @@
 %     * bicycle map
 %     * OpenSeaMap
 %
-% Dokumentation (nenne es doku und nicht Wiki → verwirrent)
+% Dokumentation (nenne es doku und nicht Wiki → verwirrent) -OK
 % wenn wo doku fehlt, selber mitschreiben?
 
 % Vorteile
 % * aktuell!
 %   wenn nicht aktuell: OSM Verbessern!
 %  - JEDE Karte ist in dem Moment veraltet, wo sie gedruckt wurde...
-%  - impressive Number: changesets/day - oder sekunde/minute 
-% changeset 19980639 an  13 Jan 2014 22:59:23
-% 16561091 an 15 Jun 2013 11:10:25
-% = 3419548 in 208d = 16500/d = 685/h = 12/Minute
-% oder 2M nodes/day dazu
+%  - impressive Number: changesets/day - oder sekunde/minute  -OK
+    % changeset 19980639 an  13 Jan 2014 22:59:23
+    % 16561091 an 15 Jun 2013 11:10:25
+    % = 3419548 in 208d = 16500/d = 685/h = 12/Minute
+    % oder 2M nodes/day dazu
 %
 % * 100e verschiedene Kartenstile 
 %   den eigenen leichtgemacht mit Tilemill
-% * Datenversionierung!
+% * Datenversionierung! -OK
 % * Language-Independent
 %   show http://toolserver.org/~osm/locale/ru.html
 % * jetzt in 3D!
 % switch2osm net vergessen!
-% HOT Team nicht vergessen!
+% HOT Team nicht vergessen! → zu geschichtliches
 
 % Dienst: Geocoder!
 % Dienste: Routing!
 
-% * kurze OSM-Vorstellung, Geschichtliches, Motivation
+% * kurze OSM-Vorstellung, Geschichtliches, Motivation -OK
 % * Technogie, Datenmodell, Lizenz
 % * OSM Nutzen: Rohdaten, Web-Dienste, Apps
+
+% 3
+% Rohdaten
+%   link zu jedem item
+%   export als svg/osm.org
+%   download von planet / shapefiles geofabrik
+%   overpass (turbo)
+% web-dienste
+%   eigene kartenstile machbar
+%      Tilemill
+%      einige karten vorstellen 
+%      Language-Independent
+%   Geocoder
+%   Notes-Feature
+%   Web-Editor
+
+\section{Einleitung}
 
 \begin{frame}{Vorstellung}
 
   \begin{itemize}
     \item Michael Maier \textless \href{mailto:Michael.Maier@student.tugraz.at}{Michael.Maier@student.tugraz.at}\textgreater
     \item Student an der TU Graz (Telematik)
+\vspace{0.3cm}
     \item OpenStreetMap als Hobby seit Juli 2010
     \item Leite den Grazer OSM-Stammtisch seit Mai 2011
+\vspace{0.3cm}
     \item Vorträge und Workshops zum Thema OSM seit 2012
     \item Freiberuflich OSM-Aufträge und Consulting
 %    \begin{itemize}
@@ -107,7 +127,6 @@
   \end{itemize}
 \end{frame}
 
-\section{Einleitung}
 
 
 % Folien zu
@@ -153,7 +172,7 @@
   \begin{itemize}
     \item OpenStreetMap Foundation (Server, Rechtliche Vertretung)
       \pause
-    \item Mapper ($\sim$30.000 aktiv), meist ohne Geo-Hintergrund
+    \item Mapper ($\sim$20.000 aktiv), meist ohne Geo-Hintergrund
     \begin{itemize}
       \item Jährliche Konferenz - "`State of the Map"', heuer: Buenos Aires
     \end{itemize}
@@ -212,30 +231,30 @@
 
 \begin{frame}{Warum OpenStreetMap?}
 
-% wichtigster punkt: EINE geodatenbank
+\hspace{0.5cm}Es beginnt 2004 mit einer Geschichte: 
+  \vspace{0.3cm}
 
-Wir brauchen freie Karten!
+Ein Student ärgert sich, dass es in UK keine freien Geodaten gibt. 
+  \vspace{0.3cm}
+
+\parbox{9.5cm}{Die Daten auf streetmap.co.uk wurden mit Steuergeldern erstellt, man kann die Rohdaten jedoch nicht frei verwenden.}
+\hfill
+\raisebox{\dimexpr-\height+\baselineskip}{\includegraphics[height=1cm]{traurig.png}}
+
+  \vspace{0.6cm}
+\pause
+
+Warum muss man für etwas, was bereits von der Allgemeinheit mit Steuergeld bezahlt wurde, nocheinmal bezahlen?
+  \vspace{0.3cm}
+
+\parbox{9.1cm}{Und darf es selbst dann nicht frei Nutzen? \\Doppelbesteuerung ist zumindest bei uns verboten?}
+\hfill 
+\raisebox{\dimexpr-\height+\baselineskip}{\includegraphics[height=1cm]{grantig.png}}
 
 \pause
-\vspace{2mm}
-Vorhandene Geodaten 
-\begin{itemize}
-  \item	für kommerzielle Nutzung zu teuer
-  \item	wenn es sie denn gibt - zB Haiti
-  \item	gratis nur für Lehre und Forschung
-\end{itemize}
 
-\pause
-\vspace{2mm}
-Karten kommerzieller Anbieter nur sehr restriktiv nutzbar
-\begin{itemize}
-  \item Restriktive Lizenzen - only Free as in Beer
-  \item Offline-Nutzung oft nicht erlaubt - Roaming!
-  \item Absichtliche Fehler, Änderungen/Richtigstellungen?
-  \pause
-  \item Bsp Google TOS: Durch die Nutzung schließen sie einen rechtsgültigen Vertrag mit Google - Dürfen unmündige Personen (unter 18?) Google Maps überhaupt nutzen?
-  \item Kosten! Google verlangt ab 25K API-Zugriffen/Tag!
-\end{itemize}
+ \parbox{7.5cm}{\vspace{0.4cm}\hspace{0.5cm}$\Longrightarrow$ \hspace{0.5cm}Er gründet OpenStreetMap!} 
+\raisebox{\dimexpr-\height+\baselineskip}{\includegraphics[height=1.2cm]{laugh.png}}
 
 \end{frame}
 
@@ -245,10 +264,11 @@ Karten kommerzieller Anbieter nur sehr restriktiv nutzbar
   \begin{itemize}
     \item Es gibt weltweit EIN Portal für ALLE Geodaten 
     \item In einheitlichem Format (WGS84, Dezimalgrad und UTF-8)
-    \item Wo man keine Anträge stellen muss, sondern einfach einen Ausschnitt wählen und Rohdaten runterladen kann
-    \item Alte Versionen verfügbar (Um Änderungen zu tracken)
-    \item Fehler melden kann, oder besser: gleich selbst ausbessern
-    \item Alle Daten unter einen offenen Lizenz nutzen kann
+    \item Alte Versionen verfügbar sind (Um Änderungen zu tracken)
+    \item Unkompliziert Fehler melden, oder selbst ausbessern kann
+\pause
+    \item Man keine Anträge stellen muss, sondern einfach einen Ausschnitt wählt und Rohdaten runterlädt
+    \item Alle Daten unter einen freien Lizenz nutzen kann
   \end{itemize}
 
   \begin{columns}[c]
@@ -264,7 +284,10 @@ Karten kommerzieller Anbieter nur sehr restriktiv nutzbar
 
 \end{frame}
 
+
+
 \section{Wie funktioniert OpenStreetMap?}
+% * Technogie, Datenmodell, Lizenz
 
 \begin{frame}{Woher kommen unsere Daten?}
 
@@ -275,14 +298,185 @@ Karten kommerzieller Anbieter nur sehr restriktiv nutzbar
 	  \item Restaurants, Bars, POIs, ...
   \end{itemize}
   \pause
-  \item Bei Mapping-Parties werden gezielt Gebiete verbessert...
+  \item Bei Mapping-Parties werden \\ gezielt Gebiete verbessert... 
 \end{itemize}
 
- \begin{center}
- \includegraphics[width=5cm]{alps_mp.jpg}
- \end{center}
+  \vspace{0.5cm}
+ 99\% Handarbeit!
+
+  \vspace*{-3cm}
+ \hfill \includegraphics[width=4.2cm]{alps_mp.jpg}
+
+
+  \pause
+\begin{itemize}
+  \item Hin und wieder Importe aus Open Government Data
+  \begin{itemize}
+    \item USA, TIGER Data (2008)
+    \item Dänemark, Hausnummern (laufend synchronisiert)
+    \item Wien, Baumkataster
+  \end{itemize}
+\end{itemize}
 
 \end{frame}
+
+\subsection{Technologie}
+
+% 100% freie Software
+% → jeder kann den Software-Stack verwenden http://openaviationmap.org/
+% Quality Assurance
+% * Es gibt automatische Q/A-Tools
+% * kaum Streitfälle - wenn dann Mailinglist, Data Working Group
+% * 
+% tolle Bilder herzeigen!
+% * irgendein Zoo
+% * 3D
+% * Tolle Kartenstile:
+%     * OSM-Fr?
+%     * stamen watercolor
+%     * pistemap
+%     * bicycle map
+%     * OpenSeaMap
+
+\begin{frame}{Freie Software für freie Daten}
+
+Nicht nur die Daten sind frei, sondern auch die Software um die Daten zu verwalten, generieren und verwenden.
+
+\vspace{0.6cm}
+
+Es wird zu 100\% Freie Software verwendet. Beispiel osm.org:
+\begin{itemize}
+  \item Hauptdatenbank: (PostgreSQL/PostGIS) 
+  \item Renderstack: Mapnik/Tirex
+  \item Webserver: Apache/mod\_tile
+  \item Webfrontend: Leaflet
+  \item Web-Backend: Basiert auf Ruby on Rails
+  \item Doku-Portal: Mediawiki
+\end{itemize}
+
+
+  \vspace*{-3cm}
+ \hfill \includegraphics[width=3cm]{tux.png}
+
+
+\pause
+
+Z.B verwendet \href{http://openaviationmap.org/}{openaviationmap.org} dieselben Technologien.
+
+\end{frame}
+
+
+\begin{frame}{Serverinfrastruktur}
+Es gibt eine zentrale Datenbank (PostgreSQL/PostGIS) für Schreibzugriffe (in GB).\\
+\pause
+Diese wird weltweit gespiegelt für Lesezugriffe mit unterschiedlichen Methoden:
+
+\begin{itemize}
+  \item API-Lesezugriffe über mehrere Spiegel-Server lastverteilt
+  \item Rendering-Server nutzen eine lokale, minütlich aktualisierte Datenbank
+  \begin{itemize}
+    \item Tileserver über GeoDNS weltweit verteilt (meist von Sponsoren)
+  \end{itemize}
+  \item Extrakte zum Download siehe \href{http://wiki.osm.org/Planet}{wiki.osm.org/Planet}
+  \item Für räumliche SQL-Abfragen: Overpass API, zB alle italienischen Restaurants in Wien
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Versionierung}
+
+Der komplette Datenbestand steht unter Versionskontrolle.
+\begin{itemize}
+  \item Auszüge können für beliebige Zeitpunkte erstellt werden
+  \item Spiegel-DB mit inkrementellen diffs minütlich aktualisierbar
+  \item DB sicher gegen Korrumption durch parallele Edits durch Verwendung von Changesets
+  \begin{itemize}
+    \item Pro Tag werden $\sim$16.500 Changesets submitted
+  \end{itemize}
+  \item Für jedes Objekt ist seine gesamte Historie abrufbar
+\end{itemize}
+
+% \vspace*{-3cm}
+ \hfill \includegraphics[width=8cm]{history.png}
+
+
+\end{frame}
+
+\subsection{Datenmodell}
+
+\begin{frame}{Datenmodell}
+Wurde von Informatikern ohne Geo-Vorbelastung erstellt:
+\begin{itemize}
+  \item Punkte (Koordinaten), $\Rightarrow$ "`Node"' \includegraphics[width=0.5cm]{node.png}
+  \begin{itemize}
+    \item POIs
+    \pause
+    \item Teile von Wegen
+  \end{itemize}
+  \item Linienzüge sind eine Reihe von Nodes, $\Rightarrow$ "`Way"' \includegraphics[width=0.5cm]{way.png}
+  \begin{itemize}
+    \item Wege, Flüsse, Hecken etc.
+    \item können geschlossen sein: Gebäude, Flächen
+  \end{itemize}
+  \pause
+  \item Gruppierungen von Ways/Nodes $\Rightarrow$ "`Relations"' \includegraphics[width=0.5cm]{relation.png}
+  \begin{itemize}
+    \item Streckenrelationen, zB ÖPNV-Routen, Radrouten
+    \item Multipolygone 
+    \item Abbiegebeschränkungen (Way:von, Way:nach, Node:über)
+    \item Meta-Relationen, zB für Verkehrsverbünde
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Datenmodell: Tagging}
+
+Jedes Element kann beliebige Anzahl Eigenschaften haben. 
+Diese "`Tags"' genannten key=value Paare sind Freitext -- z.B.:
+\begin{itemize}
+  \item amenity = cafe \includegraphics[width=0.5cm]{cafe.png}
+  \item highway = footway \includegraphics[width=1cm]{footway.png}
+  \item building = yes  \includegraphics[width=0.5cm]{building.png}
+\end{itemize}
+
+\pause
+Dadurch ist man zu 100\% flexibel - und kann praktisch alles in die OSM eintragen, was einen Geobezug hat!
+
+\begin{itemize}
+  \item Straßen- und Wegenetz, Schiffahrtsrouten, Skipisten, \dots
+  \item Flächen (Bewuchs, Landnutzung, Schutzzonen)
+  \item POI-Eigenschaften wie Kontaktdaten, Öffnungszeiten, Rollstuhleignung, Nichtraucherschutz
+\end{itemize}
+
+Standards werden im Wiki festgelegt, siehe \href{http://wiki.openstreetmap.org/wiki/DE:How\_to\_map\_a}{wiki/DE:How\_to\_map\_a}
+
+\end{frame}
+
+\begin{frame}{Datenmodell: Hintergrund}
+
+\begin{itemize}
+  \item Koordinaten sind in Dezimalgrad, WGS84.
+  \begin{itemize}
+  \item 3D-Information werden als Tags eingetragen, zb ele=435
+\end{itemize}
+  \item Genauigkeit 7 Stellen, entspricht 1\,cm am Äquator.
+  \item Dateiformate: XML, PBF (Binärkomprimierung für Geodaten von Google)
+\end{itemize}
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{Qualitätssicherung}
+
+\end{frame}
+
+
 
 \begin{frame}{Lizenz}
 
@@ -394,20 +588,19 @@ Hauptseite: \href{http://osm.org}{www.OpenStreetMap.org}
 \end{frame}
 
 \begin{frame}{Hilfe}
-
 \begin{itemize}
-  \item Fragen? OSM-Infostand am Geoday!
+  \item 
 \end{itemize}
- \begin{center}
-	  \includegraphics[width=4cm]{osm_workshop.jpg}
- \end{center}
+
+Fragen? 
 \begin{itemize}
   \item Dokumentation: \href{http://wiki.openstreetmap.org}{wiki.openstreetmap.org}
   \item Immer noch etwas unklar? $\Rightarrow$ Mailingliste \href{http://lists.openstreetmap.org/listinfo/talk-at}{talk-at}
-  \pause
-  \item \href{http://wiki.openstreetmap.org/wiki/Graz/Stammtisch}{Stammtisch Graz} jedes Monat - der nächste Montag, 17.6.2013, Brot und Spiele!
+  \item Stammtische! Europaweit: \url{http://usergroups.openstreetmap.de/}
+  \item Konferenz: \href{http://sotm-eu.org/}{State of the Map Europe}, 13.-15. Juni, Karlsruhe
 \end{itemize}
 
+  \pause
 \end{frame}
 
 \section{Ende}
