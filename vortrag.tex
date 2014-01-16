@@ -1,5 +1,5 @@
-%\documentclass{beamer} 
-\documentclass[handout]{beamer} 
+\documentclass{beamer} 
+%\documentclass[handout]{beamer} 
 
 % Michael Maier, 2014.
 % CC-BY-SA 3.0 at
@@ -670,7 +670,7 @@ Die Daten stehen unter der Open Database Licence - Entspricht etwa Creative Comm
  \begin{center}
  \includegraphics[width=1cm]{ODbL.png}
  \hspace{2cm}
- \includegraphics[width=1.5cm]{cc-by-sa.png}
+ \includegraphics[width=1.5cm]{cc-by-sa.pdf}
  \end{center}
 
 \pause
@@ -697,6 +697,7 @@ Die Web-Karten auf \href{http://osm.org}{openstreetmap.org} sind CC-BY-SA.
 %      einige karten vorstellen 
 %      Language-Independent
 %   Geocoder
+%   Routing
 %   Notes-Feature
 %   Web-Editor
 
@@ -709,19 +710,40 @@ Die Web-Karten auf \href{http://osm.org}{openstreetmap.org} sind CC-BY-SA.
 
 \subsection{Rohdaten}
 
-\begin{frame}{Interaktive Web-Karten}
+\begin{frame}{OSM-Daten Downloaden}
 
-Hauptseite: \href{http://osm.org}{www.OpenStreetMap.org}
-
- \begin{center}
- \includegraphics[width=9cm]{mainpage.png}
- \end{center}
-
-
+	Download von Rohdaten im osm-xml Format:
+\begin{itemize}
+	\item kleinen Bereich: \href{http://osm.org}{osm.org}, Export
+	\item Full Planet: \href{http://planet.osm.org}{planet.osm.org}
+	\item Länderextrakte: \href{http://download.geofabrik.de}{geofabrik.de}
+	\item SQL-Like API: Overpass, Webinterface: \href{http://overpass-turbo.eu}{overpass-turbo.eu}
+\end{itemize}
+\pause
+Export in andere Formate: 
+\begin{itemize}
+	\item Bilder (PNG, JPG, SVG, PDF): \href{http://osm.org}{osm.org}, "`Share"'-Icon rechts
+	\item Shapefiles: \href{http://download.geofabrik.de}{geofabrik.de} (Limitierte Spalten)
+	\item GeoJSON: \href{http://overpass-turbo.eu}{overpass-turbo.eu}
+\end{itemize}
 
 \end{frame}
 
-\begin{frame}{Qualitätssicherung}
+\subsection{Dienste}
+
+\begin{frame}{Dienste}
+	Was bietet OpenStreetMap:
+\begin{itemize}
+	\item Geocoder: \href{http://nominatim.osm.org}{nominatim.osm.org}, Suche auf osm.org
+		\pause
+	\item Routing-Dienste für Auto, Fahrrad, Rollstuhl, \dots
+		\pause
+	\item Web-Karten zum Einbetten als HTML: \href{http://osm.org}{osm.org}, "`Share"'-Icon rechts
+		\pause
+	\item Links auf jedes einzelne OSM-Objekt; Marker
+\end{itemize}
+
+Wie das funktioniert $\Rightarrow$ Workshop Nachmittags
 
 \end{frame}
 
@@ -730,9 +752,10 @@ Hauptseite: \href{http://osm.org}{www.OpenStreetMap.org}
 	Apps:
  
  \begin{itemize}
-   \item  Android ( \textgreater 70) \url{http://wiki.osm.org/Android}
+   \item  Android ( \textgreater 80) \url{http://wiki.osm.org/Android}
    \item  iPhone ( \textgreater 60 )  \url{http://wiki.osm.org/Apple\_iOS}
    \item  Blackberry ( 8 ) \url{http://wiki.osm.org/BlackBerry\_OS}
+   \item  Windows Phone ( 13 ) \url{http://wiki.osm.org/Windows\_Phone}
  \end{itemize}
  
  \begin{center}
@@ -754,7 +777,7 @@ Hauptseite: \href{http://osm.org}{www.OpenStreetMap.org}
     \begin{itemize}
 	    \item Hauptseite - Edit: iD (JavaScript)
       \item JOSM web-start
-      \item oder auch einfach nur Fehler melden!
+      \item oder auch einfach nur Fehler melden mit dem Note-feature auf \href{http://osm.org}{osm.org}!
 	      \pause
     \end{itemize}
     \item Mobile (Auswahl): Alle siehe  \href{http://wiki.openstreetmap.org/wiki/Android\#OpenStreetMap\_editing\_features}{Android}, \href{http://wiki.openstreetmap.org/wiki/Apple\_iOS\#OpenStreetMap\_editing\_features}{iOS}:
